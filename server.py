@@ -4,7 +4,7 @@ import json
 HOST = socket.gethostname()
 PORT = 5555 
 
-SERVER_NAME = socket.gethostname()
+SERVER_NAME = "Server of _____" # fill in later
 SERVER_NUMBER = 50 
 
 def main(): 
