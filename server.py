@@ -1,10 +1,10 @@
 import socket
 import json 
 
-HOST = socket.gethostname()
+HOST = socket.gethostname() # gets host automatically 
 PORT = 5555 
 
-SERVER_NAME = "Server of _____" # fill in later
+SERVER_NAME = "Server of Nina Abogadie and Gabrielle Marfil" 
 SERVER_NUMBER = 50 
 
 def main(): 
@@ -41,7 +41,7 @@ def main():
         print(f"Client Name: {client_name}")
         print(f"Server Name: {SERVER_NAME}") 
 
-        # shutdown condition 
+        # shutdown condition (in the reqs)
         if client_number < 1 or client_number > 100: 
                 
                 print("SERVER: Out-of-range number received.")
@@ -52,6 +52,7 @@ def main():
 
                 return 
         
+        # sum calculation (in the reqs)
         total = client_number + SERVER_NUMBER 
 
         print(f"Client Number: {client_number}")
@@ -63,9 +64,8 @@ def main():
             "number": SERVER_NUMBER 
         }
 
-        clientsocket.send(
-            json.dumps(response).encode()
-        )
+        # send response 
+        clientsocket.send(json.dumps(response).encode())
 
         print("SERVER: Reply sent.")
 
