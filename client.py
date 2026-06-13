@@ -1,10 +1,10 @@
 import socket
 import json
 
-HOST = socket.gethostname()
+HOST = socket.gethostname() # gets host automatically 
 PORT = 5555
 
-CLIENT_NAME = "Client of _____" # fill in later 
+CLIENT_NAME = "Client of Nina Abogadie and Gabrielle Marfil"   
 
 def get_number():
     
@@ -19,7 +19,7 @@ def get_number():
 
             print("Number must be between 1 and 100.")
 
-        except ValueError:
+        except ValueError: # for NaN input 
             print("Invalid input. Enter an integer.")
 
 
@@ -34,6 +34,7 @@ def main():
 
     print("CLIENT: Connecting...")
 
+    # connect client to server 
     clientsocket.connect((HOST, PORT))
 
     print("CLIENT: Connected.")
